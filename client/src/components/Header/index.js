@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
+import logo from '../../logo.png';
+import '../../App.css';
 
 const Header = () => {
   const logout = (event) => {
@@ -10,13 +12,25 @@ const Header = () => {
   };
   return (
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">TripBook</h1>
-          </Link>
-          <p className="m-0">Hope you like pictures of Mountains...</p>
+      
+        {/* Top nav bar buttons */}
+        <div className="row">
+            <div className="col-12 text-end navBar p-2">
+                  <Link to="/" className="navLink rightBorder">Welcome</Link>
+                  <Link to="/" className="navLink rightBorder">Home</Link>
+                  <Link to="/login" className="navLink">Logout</Link>
+            </div>
         </div>
+        {/* Logo */}
+        <div className="row">
+            <div className="col-12 text-center p-5">
+              <h1 className="mainTitle"><img className="homeLogo" src={logo}></img> TripBook</h1>
+            </div>
+        </div>
+
+
+      <div className="container flex-row justify-space-between-lg justify-center align-center">
+
         <div>
           {Auth.loggedIn() ? (
             <>
