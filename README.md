@@ -1,3 +1,3 @@
 # TripBook
 
-Let's travel
+Let's travel!
