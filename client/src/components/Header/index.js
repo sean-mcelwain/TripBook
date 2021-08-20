@@ -16,7 +16,7 @@ const Header = () => {
         {/* Top nav bar buttons */}
         <div className="container-fluid">
           <div className="row text-right">
-              <div className="col-12 text-end navBar py-2">
+              <div className="col-12 text-end navBar">
                     <Link to="/" className="navLink rightBorder">Welcome</Link>
                     <Link to="/" className="navLink rightBorder">Home</Link>
                     <Link to="/login" className="navLink">Logout</Link>

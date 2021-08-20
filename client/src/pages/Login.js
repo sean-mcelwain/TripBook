@@ -40,8 +40,8 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="login-form mt-5">
+    <main>
+      <div className="login-form">
         {data ? (
               <p>
                 Success! You may now head{' '}
@@ -50,24 +50,24 @@ const Login = (props) => {
             ) : (
             <form onSubmit={handleFormSubmit}>
                   <h2 className="text-left">Login</h2>   
-                  <div className="form-group mt-4">
-                    <input type="email" className="form-control mb-3" placeholder="Your email" name="email" type="email" value={formState.email} onChange={handleChange}></input>
+                  <div className="form-group">
+                    <input type="email" className="form-control" placeholder="Your email" name="email" type="email" value={formState.email} onChange={handleChange}></input>
                   </div>
                   <div className="form-group">
-                      <input type="password" className="form-control mb-3" placeholder="******" name="password" type="password" value={formState.password} onChange={handleChange}></input>
+                      <input type="password" className="form-control" placeholder="******" name="password" type="password" value={formState.password} onChange={handleChange}></input>
                   </div>        
                   <div className="form-group">
-                      <button type="submit" name="loginForm" className="btn btn-primary btn-lg btn-block">Sign in</button>
+                      <button type="submit" name="loginForm" className="btn btn-lg btn-block">Sign in</button>
                   </div>
               </form>
               )}
 
               {error && (
-                <div className="my-3 p-3 bg-danger text-white">
+                <div className="bg-danger text-white">
                   {error.message}
                 </div>
               )}
-              <p className="text-center small">Don't have an account? <Link to="/signup">Sign up here!</Link></p>
+              <div className="hint-text">Don't have an account? <Link to="/signup">Sign up here!</Link></div>
           </div>
     </main>
   );

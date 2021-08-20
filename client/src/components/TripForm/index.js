@@ -82,12 +82,12 @@ const TripForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-primary btn-block" type="submit">
                 Add Trip
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className="col-12 bg-danger text-white p-3">
                 {error.message}
               </div>
             )}
