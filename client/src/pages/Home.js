@@ -19,10 +19,10 @@ const Home = () => {
             <div className="row btnRow">
                 {/* Home page main buttons */}
                 <div className="col-6 text-center p-5">
-                    <Link className="btn btn-primary p-4" to="/trips">View Your Trips</Link>
+                    <Link className="btn btn-primary" to="/trips">View Your Trips</Link>
                 </div>
                 <div className="col-6 p-5 text-center">
-                    <button className="btn btn-primary p-4">Take a Trip!</button>
+                    <button className="btn btn-primary">Take a Trip!</button>
                 </div>
                 <div className="col-12">
                     <div className="flex-row justify-center text-center">
