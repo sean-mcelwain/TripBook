@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -42,51 +41,34 @@ const Login = (props) => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
+      <div className="login-form mt-5">
+        {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
+            <form onSubmit={handleFormSubmit}>
+                  <h2 className="text-left">Login</h2>   
+                  <div className="form-group mt-4">
+                    <input type="email" className="form-control mb-3" placeholder="Your email" name="email" type="email" value={formState.email} onChange={handleChange}></input>
+                  </div>
+                  <div className="form-group">
+                      <input type="password" className="form-control mb-3" placeholder="******" name="password" type="password" value={formState.password} onChange={handleChange}></input>
+                  </div>        
+                  <div className="form-group">
+                      <button type="submit" name="loginForm" className="btn btn-primary btn-lg btn-block">Sign in</button>
+                  </div>
               </form>
-            )}
+              )}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
+              {error && (
+                <div className="my-3 p-3 bg-danger text-white">
+                  {error.message}
+                </div>
+              )}
+              <p className="text-center small">Don't have an account? <Link to="/signup">Sign up here!</Link></p>
           </div>
-        </div>
-      </div>
     </main>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 import logo from '../../logo.png';
-import '../../App.css';
+import '../../index.css';
 
 const Header = () => {
   const logout = (event) => {
@@ -11,21 +11,23 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+    <header className="bg-primary text-light mb-4 pb-3 align-center">
       
         {/* Top nav bar buttons */}
-        <div className="row">
-            <div className="col-12 text-end navBar p-2">
-                  <Link to="/" className="navLink rightBorder">Welcome</Link>
-                  <Link to="/" className="navLink rightBorder">Home</Link>
-                  <Link to="/login" className="navLink">Logout</Link>
-            </div>
-        </div>
-        {/* Logo */}
-        <div className="row">
-            <div className="col-12 text-center p-5">
-              <h1 className="mainTitle"><img className="homeLogo" src={logo}></img> TripBook</h1>
-            </div>
+        <div className="container-fluid">
+          <div className="row text-right">
+              <div className="col-12 text-end navBar py-2">
+                    <Link to="/" className="navLink rightBorder">Welcome</Link>
+                    <Link to="/" className="navLink rightBorder">Home</Link>
+                    <Link to="/login" className="navLink">Logout</Link>
+              </div>
+          </div>
+          {/* Logo */}
+          <div className="row">
+              <div className="col-12 text-center p-5">
+                <h1 className="mainTitle"><img className="homeLogo" src={logo}></img> TripBook</h1>
+              </div>
+          </div>
         </div>
 
 
