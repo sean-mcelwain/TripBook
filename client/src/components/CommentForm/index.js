@@ -41,7 +41,7 @@ const CommentForm = ({ tripId }) => {
 
   return (
     <div>
-      <h4>What are your trips on this trip?</h4>
+      <h4>Like this trip?  Comment to let the author know</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -57,7 +57,7 @@ const CommentForm = ({ tripId }) => {
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="">
               <textarea
                 name="commentText"
                 placeholder="Add your comment..."
@@ -68,7 +68,7 @@ const CommentForm = ({ tripId }) => {
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
+            <div className="">
               <button className="btn btn-primary btn-block" type="submit">
                 Add Comment
               </button>
