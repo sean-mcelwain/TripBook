@@ -49,34 +49,12 @@ const Home = () => {
                 </div>
 
                 {/* Trip images */}
-                <div className="col-12 text-center">
-                        <img className="travelImg" src="/Images/1.jpg"></img>
-                        <img className="travelImg" src="/Images/2.jpg"></img>
-                        <img className="travelImg" src="/Images/3.jpg"></img>
-                        <img className="travelImg" src="/Images/4.jpg"></img>
-                        <img className="travelImg" src="/Images/5.jpg"></img>
-                        <img className="travelImg" src="/Images/6.jpg"></img>
-                        <img className="travelImg" src="/Images/7.jpg"></img>
-                        <img className="travelImg" src="/Images/8.jpg"></img>
-                        <img className="travelImg" src="/Images/9.jpg"></img>
-                        <img className="travelImg" src="/Images/10.jpg"></img>
-                        <img className="travelImg" src="/Images/12.jpg"></img>
-                        <img className="travelImg" src="/Images/13.jpg"></img>
-                        <img className="travelImg" src="/Images/14.jpg"></img>
-                        <img className="travelImg" src="/Images/15.jpg"></img>
-                        <img className="travelImg" src="/Images/16.jpg"></img>
-                        <img className="travelImg" src="/Images/17.jpg"></img>
-                        <img className="travelImg" src="/Images/18.jpg"></img>
-                        <img className="travelImg" src="/Images/19.jpg"></img>
-                        <img className="travelImg" src="/Images/20.jpg"></img>
-                </div>
+
             </div>
           </div>
 
-          {/* Trip images */}
 
-        </div>
-      </div>
+
     </div>
   );
 };
