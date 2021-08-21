@@ -14,6 +14,11 @@ const tripSchema = new Schema({
     required: true,
     trim: true,
   },
+  tripImage: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

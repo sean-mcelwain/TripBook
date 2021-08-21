@@ -25,11 +25,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_TRIP = gql`
-  mutation addTrip($tripText: String!, $tripAuthor: String!) {
-    addTrip(tripText: $tripText, tripAuthor: $tripAuthor) {
+  mutation addTrip($tripText: String!, $tripAuthor: String!, $tripImage: String!) {
+    addTrip(tripText: $tripText, tripImage: $tripImage, tripAuthor: $tripAuthor) {
       _id
       tripText
       tripAuthor
+      tripImage
       createdAt
       comments {
         _id
@@ -53,6 +54,7 @@ export const ADD_COMMENT = gql`
       _id
       tripText
       tripAuthor
+      tripImage
       createdAt
       comments {
         _id

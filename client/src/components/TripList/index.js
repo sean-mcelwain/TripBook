@@ -21,6 +21,9 @@ const TripList = ({ trips, title }) => {
             <div className="card-body bg-light p-2">
               <p>{trip.tripText}</p>
             </div>
+            <div className="card-body bg-light p-2">
+              <p>{trip.tripImage}</p>
+            </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/trips/${trip._id}`}
