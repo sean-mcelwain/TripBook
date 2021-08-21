@@ -42,8 +42,8 @@ const resolvers = {
 
       return { token, user };
     },
-    addTrip: async (parent, { tripText, tripAuthor }) => {
-      const trip = await Trip.create({ tripText, tripAuthor });
+    addTrip: async (parent, { tripText, tripAuthor, tripImage }) => {
+      const trip = await Trip.create({ tripText, tripAuthor, tripImage });
 
       await User.findOneAndUpdate(
         { username: tripAuthor },

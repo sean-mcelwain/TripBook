@@ -1,42 +1,52 @@
 [
   {
     "tripText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
-    "tripAuthor": "Brian Kernighan"
+    "tripAuthor": "Brian Kernighan",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
-    "tripAuthor": "Max Kanat-Alexander"
+    "tripAuthor": "Max Kanat-Alexander",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
-    "tripAuthor": "Why The Lucky Stiff"
+    "tripAuthor": "Why The Lucky Stiff",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "I'm not a great programmer; I'm just a good programmer with great habits.",
-    "tripAuthor": "Kent Beck"
+    "tripAuthor": "Kent Beck",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "Walking on water and developing software from a specification are easy if both are frozen.",
-    "tripAuthor": "Edward V. Berard"
+    "tripAuthor": "Edward V. Berard",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "The most disastrous thing that you can ever learn is your first programming language.",
-    "tripAuthor": "Alan Kay"
+    "tripAuthor": "Alan Kay",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "The most important property of a program is whether it accomplishes the intention of its user.",
-    "tripAuthor": "C.A.R. Hoare"
+    "tripAuthor": "C.A.R. Hoare",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
-    "tripAuthor": "David Thomas"
+    "tripAuthor": "David Thomas",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "If you optimize everything, you will always be unhappy.",
-    "tripAuthor": "Donald Knuth"
+    "tripAuthor": "Donald Knuth",
+    "tripImage": "IMAGE URL"
   },
   {
     "tripText": "It's not a bug; it's an undocumented feature.",
-    "tripAuthor": "Lernantino"
+    "tripAuthor": "Lernantino",
+    "tripImage": "IMAGE URL"
   }
 ]

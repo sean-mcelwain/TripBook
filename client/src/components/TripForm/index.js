@@ -9,9 +9,11 @@ import Auth from '../../utils/auth';
 
 const TripForm = () => {
   const [tripText, setTripText] = useState('');
+  const [tripImage, setTripImage] = useState('');
+  
 
   const [characterCount, setCharacterCount] = useState(0);
-
+  
   const [addTrip, { error }] = useMutation(ADD_TRIP, {
     update(cache, { data: { addTrip } }) {
       try {
@@ -35,10 +37,12 @@ const TripForm = () => {
         variables: {
           tripText,
           tripAuthor: Auth.getProfile().data.username,
+          tripImage,
         },
       });
 
       setTripText('');
+      setTripImage('');
     } catch (err) {
       console.error(err);
     }
@@ -49,6 +53,10 @@ const TripForm = () => {
 
     if (name === 'tripText' && value.length <= 280) {
       setTripText(value);
+      setCharacterCount(value.length);
+    }
+    if (name === 'tripImage' && value.length <= 280) {
+      setTripImage(value);
       setCharacterCount(value.length);
     }
   };
@@ -75,6 +83,16 @@ const TripForm = () => {
                 name="tripText"
                 placeholder="Here's a new trip..."
                 value={tripText}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <div className="col-12 col-lg-9">
+              <textarea
+                name="tripImage"
+                placeholder="Here's a new IMAGE..."
+                value={tripImage}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
