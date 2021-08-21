@@ -34,6 +34,9 @@ const SingleTrip = () => {
       <h3 className="card-header bg-dark text-light p-2 m-0">
         {trip.tripImage} <br />
       </h3>
+      <h3 className="card-header bg-dark text-light p-2 m-0">
+        {trip.tripTitle} <br />
+      </h3>
       <div className="bg-light">
         <blockquote
           className=""
