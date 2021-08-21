@@ -31,9 +31,15 @@ const SingleTrip = () => {
           had this trip on {trip.createdAt}
         </span>
       </h3>
-      <div className="bg-light py-4">
+      <h3 className="card-header bg-dark text-light p-2 m-0">
+        {trip.tripImage} <br />
+      </h3>
+      <h3 className="card-header bg-dark text-light p-2 m-0">
+        {trip.tripTitle} <br />
+      </h3>
+      <div className="bg-light">
         <blockquote
-          className="p-4"
+          className=""
           style={{
             fontSize: '1.5rem',
             fontStyle: 'italic',
@@ -48,7 +54,7 @@ const SingleTrip = () => {
       <div className="my-5">
         <CommentList comments={trip.comments} />
       </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm tripId={trip._id} />
       </div>
     </div>

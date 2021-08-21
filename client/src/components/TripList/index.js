@@ -11,21 +11,15 @@ const TripList = ({ trips, title }) => {
       <h3>{title}</h3>
       {trips &&
         trips.map((trip) => (
-          <div key={trip._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {trip.tripAuthor} <br />
-              <span style={{ fontSize: '1rem' }}>
-                had this trip on {trip.createdAt}
-              </span>
+          <div key={trip._id} className="card">
+            <h4 className="card-header">
+              {trip.tripTitle} <br />
             </h4>
-            <div className="card-body bg-light p-2">
-              <p>{trip.tripText}</p>
-            </div>
             <Link
-              className="btn btn-primary btn-block btn-squared"
+              className="btn"
               to={`/trips/${trip._id}`}
             >
-              Join the discussion on this trip.
+            <img src={trip.tripImage} alt="Image" height="250" /> 
             </Link>
           </div>
         ))}

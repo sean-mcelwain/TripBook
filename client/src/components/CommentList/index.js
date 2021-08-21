@@ -8,7 +8,7 @@ const CommentList = ({ comments = [] }) => {
   return (
     <>
       <h3
-        className="p-5 display-inline-block"
+        className="display-inline-block"
         style={{ borderBottom: '1px dotted #1a1a1a' }}
       >
         Comments

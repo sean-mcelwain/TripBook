@@ -9,9 +9,12 @@ import Auth from '../../utils/auth';
 
 const TripForm = () => {
   const [tripText, setTripText] = useState('');
+  const [tripImage, setTripImage] = useState('');
+  const [tripTitle, setTripTitle] = useState('');
+  
 
   const [characterCount, setCharacterCount] = useState(0);
-
+  
   const [addTrip, { error }] = useMutation(ADD_TRIP, {
     update(cache, { data: { addTrip } }) {
       try {
@@ -35,10 +38,14 @@ const TripForm = () => {
         variables: {
           tripText,
           tripAuthor: Auth.getProfile().data.username,
+          tripImage,
+          tripTitle,
         },
       });
 
       setTripText('');
+      setTripImage('');
+      setTripTitle('');
     } catch (err) {
       console.error(err);
     }
@@ -49,6 +56,14 @@ const TripForm = () => {
 
     if (name === 'tripText' && value.length <= 280) {
       setTripText(value);
+      setCharacterCount(value.length);
+    }
+    if (name === 'tripImage' && value.length <= 280) {
+      setTripImage(value);
+      setCharacterCount(value.length);
+    }
+    if (name === 'tripTitle' && value.length <= 280) {
+      setTripTitle(value);
       setCharacterCount(value.length);
     }
   };
@@ -80,14 +95,36 @@ const TripForm = () => {
                 onChange={handleChange}
               ></textarea>
             </div>
+            <div className="col-12 col-lg-9">
+            <img src={tripImage} alt="Image" width="500" height="600" /> 
+              <textarea
+                name="tripImage"
+                placeholder="Here's a new IMAGE..."
+                value={tripImage}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <div className="col-12 col-lg-9">
+            <img src={tripTitle} alt="Title" width="500" height="600" /> 
+              <textarea
+                name="tripTitle"
+                placeholder="Here's a new Title..."
+                value={tripTitle}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-primary btn-block" type="submit">
                 Add Trip
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className="col-12 bg-danger text-white p-3">
                 {error.message}
               </div>
             )}
