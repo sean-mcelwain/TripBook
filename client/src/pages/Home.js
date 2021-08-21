@@ -1,13 +1,15 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import {BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
-import TripList from '../components/TripList';
-import TripForm from '../components/TripForm';
-import logo from '../logo.png';
-import '../index.css';
+import TripList from "../components/TripList";
+import TripForm from "../components/TripForm";
+import logo from "../logo.png";
+import "../index.css";
+import AllImages from "../components/ImageUpload/allImages";
 
-import { QUERY_TRIPS } from '../utils/queries';
+
+import { QUERY_TRIPS } from "../utils/queries";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_TRIPS);
@@ -15,6 +17,7 @@ const Home = () => {
 
   return (
     <div className="row bg-light whiteCon pb-5">
+
         <div className="col-12">
             <div className="row btnRow">
                 {/* Home page main buttons */}
@@ -68,9 +71,14 @@ const Home = () => {
                         <img className="travelImg" src="/Images/20.jpg"></img>
                 </div>
             </div>
+          </div>
+
+          {/* Trip images */}
+
         </div>
+      </div>
     </div>
-);
-}
+  );
+};
 
 export default Home;
