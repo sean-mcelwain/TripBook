@@ -2,51 +2,61 @@
   {
     "tripText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
     "tripAuthor": "Brian Kernighan",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
     "tripAuthor": "Max Kanat-Alexander",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
     "tripAuthor": "Why The Lucky Stiff",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "I'm not a great programmer; I'm just a good programmer with great habits.",
     "tripAuthor": "Kent Beck",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "Walking on water and developing software from a specification are easy if both are frozen.",
     "tripAuthor": "Edward V. Berard",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "The most disastrous thing that you can ever learn is your first programming language.",
     "tripAuthor": "Alan Kay",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "The most important property of a program is whether it accomplishes the intention of its user.",
     "tripAuthor": "C.A.R. Hoare",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
     "tripAuthor": "David Thomas",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "If you optimize everything, you will always be unhappy.",
     "tripAuthor": "Donald Knuth",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   },
   {
     "tripText": "It's not a bug; it's an undocumented feature.",
     "tripAuthor": "Lernantino",
-    "tripImage": "IMAGE URL"
+    "tripImage": "https://cdn.onlinewebfonts.com/svg/img_249555.png",
+    "tripTitle": "Title"
   }
 ]

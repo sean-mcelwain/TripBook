@@ -10,6 +10,7 @@ export const QUERY_USER = gql`
         _id
         tripText
         tripImage
+        tripTitle
         createdAt
       }
     }
@@ -23,6 +24,7 @@ export const QUERY_TRIPS = gql`
       tripText
       tripAuthor
       tripImage
+      tripTitle
       createdAt
     }
   }
@@ -35,6 +37,7 @@ export const QUERY_SINGLE_TRIP = gql`
       tripText
       tripAuthor
       tripImage
+      tripTitle
       createdAt
       comments {
         _id

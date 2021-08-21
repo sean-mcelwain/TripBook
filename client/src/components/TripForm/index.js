@@ -10,6 +10,7 @@ import Auth from '../../utils/auth';
 const TripForm = () => {
   const [tripText, setTripText] = useState('');
   const [tripImage, setTripImage] = useState('');
+  const [tripTitle, setTripTitle] = useState('');
   
 
   const [characterCount, setCharacterCount] = useState(0);
@@ -38,11 +39,13 @@ const TripForm = () => {
           tripText,
           tripAuthor: Auth.getProfile().data.username,
           tripImage,
+          tripTitle,
         },
       });
 
       setTripText('');
       setTripImage('');
+      setTripTitle('');
     } catch (err) {
       console.error(err);
     }
@@ -57,6 +60,10 @@ const TripForm = () => {
     }
     if (name === 'tripImage' && value.length <= 280) {
       setTripImage(value);
+      setCharacterCount(value.length);
+    }
+    if (name === 'tripTitle' && value.length <= 280) {
+      setTripTitle(value);
       setCharacterCount(value.length);
     }
   };
@@ -89,10 +96,22 @@ const TripForm = () => {
               ></textarea>
             </div>
             <div className="col-12 col-lg-9">
+            <img src={tripImage} alt="Image" width="500" height="600" /> 
               <textarea
                 name="tripImage"
                 placeholder="Here's a new IMAGE..."
                 value={tripImage}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <div className="col-12 col-lg-9">
+            <img src={tripTitle} alt="Title" width="500" height="600" /> 
+              <textarea
+                name="tripTitle"
+                placeholder="Here's a new Title..."
+                value={tripTitle}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}

@@ -25,14 +25,14 @@ const Home = () => {
                     <button className="btn btn-primary">Take a Trip!</button>
                 </div>
                 <div className="col-12">
-                    <div className="flex-row justify-center text-center">
+                    <div className="flex-row justify-center">
                         <div
-                        className="col-12 col-md-10 mb-3 p-3"
+                        className="col-12"
                         style={{ border: '1px dotted #1a1a1a' }}
                         >
                         <TripForm />
                         </div>
-                        <div className="col-12 col-md-8 mb-3">
+                        <div className="">
                         {loading ? (
                             <div>Loading...</div>
                         ) : (
