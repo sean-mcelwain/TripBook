@@ -1,60 +1,60 @@
 [
   {
-    "tripText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
+    "tripText": "Something to say about a good isolated vacation, completely unplugged!",
     "tripAuthor": "Brian Kernighan",
     "tripImage": "/Images/1.jpg",
     "tripTitle": "Maldives boat trip"
   },
   {
-    "tripText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
+    "tripText": "The City of love held up to its reputation!",
     "tripAuthor": "Max Kanat-Alexander",
     "tripImage": "/Images/2.jpg",
     "tripTitle": "Eiffel Tower"
   },
   {
-    "tripText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
+    "tripText": "Of course we sang the song as we skipped across the bridge. It was a lot bigger than I thought.",
     "tripAuthor": "Why The Lucky Stiff",
     "tripImage": "/Images/3.jpg",
     "tripTitle": "London Bridge"
   },
   {
-    "tripText": "I'm not a great programmer; I'm just a good programmer with great habits.",
+    "tripText": "Some how this perfect picture didn't even do it credit.",
     "tripAuthor": "Kent Beck",
     "tripImage": "/Images/4.jpg",
     "tripTitle": "Bora sunset"
   },
   {
-    "tripText": "Walking on water and developing software from a specification are easy if both are frozen.",
+    "tripText": "Really cool to walk around...I guess you can say I was entertained...",
     "tripAuthor": "Edward V. Berard",
     "tripImage": "/Images/5.jpg",
     "tripTitle": "Coliseum"
   },
   {
-    "tripText": "The most disastrous thing that you can ever learn is your first programming language.",
+    "tripText": "slowest taxi ever but still really cool.",
     "tripAuthor": "Alan Kay",
     "tripImage": "/Images/6.jpg",
     "tripTitle": "Gondola Rides"
   },
   {
-    "tripText": "The most important property of a program is whether it accomplishes the intention of its user.",
+    "tripText": "Didn't get to put on a wig and yell at people but it was still pretty cool.",
     "tripAuthor": "C.A.R. Hoare",
     "tripImage": "/Images/7.jpg",
     "tripTitle": "Parliament trip"
   },
   {
-    "tripText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
+    "tripText": "Warning, do not be afraid of heights. If you are not it leads to phenomenal views.",
     "tripAuthor": "David Thomas",
     "tripImage": "/Images/8.jpg",
     "tripTitle": "London Eye"
   },
   {
-    "tripText": "If you optimize everything, you will always be unhappy.",
+    "tripText": "breeze in your face and no matter where you looked it looked like a picture in a travel magazine.",
     "tripAuthor": "Donald Knuth",
     "tripImage": "/Images/9.jpg",
     "tripTitle": "Greece"
   },
   {
-    "tripText": "It's not a bug; it's an undocumented feature.",
+    "tripText": "Perfect vacation spot to get away from everything and truly decompress.",
     "tripAuthor": "Lernantino",
     "tripImage": "/Images/10.jpg",
     "tripTitle": "If you have to ask where you cant afford it"
