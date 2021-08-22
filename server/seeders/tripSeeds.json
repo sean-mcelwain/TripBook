@@ -1,5 +1,11 @@
 [
   {
+    "tripText": "Test Text",
+    "tripAuthor": "Sean",
+    "tripImage": "/Images/1.jpg",
+    "tripTitle": "Sean Test"
+  },
+  {
     "tripText": "Something to say about a good isolated vacation, completely unplugged!",
     "tripAuthor": "Brian Kernighan",
     "tripImage": "/Images/1.jpg",

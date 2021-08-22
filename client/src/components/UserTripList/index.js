@@ -11,15 +11,15 @@ const UserTripList = ({ trips, title }) => {
       <h3>{title}</h3>
       {trips &&
         trips.map((trip) => (
-          <div key={trip._id} className="card">
+          <div key={trip.trips._id} className="card">
             <h4 className="card-header">
-              {trip.tripTitle} <br />
+              {trip.trips.tripTitle} <br />
             </h4>
             <Link
               className="btn"
-              to={`/trips/${trip._id}`}
+              to={`/trips/${trip.trips._id}`}
             >
-            <img src={trip.tripImage} alt="Image" height="250" /> 
+            <img src={trip.trips.tripImage} alt="Image" height="250" /> 
             </Link>
           </div>
         ))}

@@ -26,7 +26,7 @@ export const ADD_USER = gql`
 
 export const ADD_TRIP = gql`
   mutation addTrip($tripText: String!, $tripAuthor: String!, $tripImage: String!, $tripTitle: String!) {
-    addTrip(tripText: $tripText, tripImage: $tripImage, tripAuthor: $tripAuthor, tripTitle: $tripTitle) {
+    addTrip(tripText: $tripText, tripAuthor: $tripAuthor, tripImage: $tripImage, tripTitle: $tripTitle) {
       _id
       tripText
       tripAuthor

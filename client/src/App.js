@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Trips from './pages/Trips';
+import UploadTrip from './pages/UploadTrip';
 import Search from './pages/Search';
 import SingleTrip from './pages/SingleTrip';
 import Header from './components/Header';
@@ -59,6 +60,9 @@ function App() {
             </Route>
             <Route exact path="/trips">
               <Trips />
+            </Route>
+            <Route exact path="/uploadtrip">
+              <UploadTrip />
             </Route>
             <Route exact path="/search">
               <Search />
