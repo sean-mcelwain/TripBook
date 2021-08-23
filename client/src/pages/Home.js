@@ -24,14 +24,11 @@ const Home = () => {
               View Your Trips
             </Link>
           </div>
-          <div className="col-6 p-5 text-center">
+          <div className="col-6 text-center">
             <button className="btn btn-primary">Take a Trip!</button>
           </div>
-          <div className="col-12">
-            <div className="flex-row justify-center">
-              <div className="col-12" style={{ border: "1px dotted #1a1a1a" }}>
-                <TripForm />
-              </div>
+          <div>
+            <div>
               <div className="text-center">
                 {loading ? (
                   <div>Loading...</div>

@@ -15,17 +15,8 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          by the Voyageur team.
+        <h4><br></br>
+          Made by the Voyageur Team, © 2021 
         </h4>
       </div>
     </footer>

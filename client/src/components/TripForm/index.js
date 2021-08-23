@@ -82,7 +82,7 @@ const TripForm = () => {
             Character Count: {characterCount}/280
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
             <div className="">

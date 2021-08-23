@@ -11,11 +11,11 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light align-center">
+    <header className="header">
       {/* Top nav bar buttons */}
       <div className="container-fluid">
         <div className="row text-right">
-          <div className="col-12 text-end navBar">
+          <div className="navBar">
             {Auth.loggedIn() ? (
               <>
                 <span className="navLink rightBorder">
@@ -41,9 +41,9 @@ const Header = () => {
           </div>
         </div>
         {/* Logo */}
-        <div className="row">
-          <div className="col-12 text-center p-5">
-            <Link to="/" className="mainTitle">
+        <div>
+          <div className="mainTitle">
+            <Link to="/">
               <img
                 className="homeLogo"
                 onClick="window.location.href= /pages/home.js'"

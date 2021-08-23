@@ -46,7 +46,7 @@ const CommentForm = ({ tripId }) => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={` ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
@@ -54,7 +54,7 @@ const CommentForm = ({ tripId }) => {
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
             <div className="">
@@ -62,7 +62,7 @@ const CommentForm = ({ tripId }) => {
                 name="commentText"
                 placeholder="Add your comment..."
                 value={commentText}
-                className="form-input w-100"
+                className="form-input"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
