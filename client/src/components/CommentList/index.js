@@ -13,11 +13,11 @@ const CommentList = ({ comments = [] }) => {
       >
         Comments
       </h3>
-      <div className="flex-row my-4">
+      <div >
         {comments &&
           comments.map((comment) => (
-            <div key={comment._id} className="col-12 mb-3 pb-3">
-              <div className="">
+            <div key={comment._id} >
+              <div >
                 <h5 className="card-header">
                   {comment.commentAuthor} commented{' '}
                   <span style={{ fontSize: '0.825rem' }}>

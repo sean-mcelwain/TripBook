@@ -75,57 +75,53 @@ const TripForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={` ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
             Character Count: {characterCount}/280
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="">
               <textarea
                 name="tripText"
                 placeholder="Here's a new trip..."
                 value={tripText}
-                className="form-input w-100"
+                className="form-input"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
-            </div>
-            <div className="col-12 col-lg-9">
-            <img src={tripImage} alt="Image" width="500" height="600" /> 
+
               <textarea
                 name="tripImage"
                 placeholder="Here's a new IMAGE..."
                 value={tripImage}
-                className="form-input w-100"
+                className="form-input"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
-            </div>
-            <div className="col-12 col-lg-9">
-            <img src={tripTitle} alt="Title" width="500" height="600" /> 
+
               <textarea
                 name="tripTitle"
                 placeholder="Here's a new Title..."
                 value={tripTitle}
-                className="form-input w-100"
+                className="form-input"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
+            <div className="">
               <button className="btn btn-primary btn-block" type="submit">
                 Add Trip
               </button>
             </div>
             {error && (
-              <div className="col-12 bg-danger text-white p-3">
-                {error.message}
+              <div className="col-12 text-black">
+                <b>Error: </b>{error.message}
               </div>
             )}
           </form>

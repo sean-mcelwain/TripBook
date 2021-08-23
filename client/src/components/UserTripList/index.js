@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const UserTripList = ({ trips, title }) => {
+const TripList = ({ trips, title }) => {
   if (!trips.length) {
     return <h3>No Trips Yet</h3>;
   }
@@ -27,4 +27,4 @@ const UserTripList = ({ trips, title }) => {
   );
 };
 
-export default UserTripList;
+export default TripList;
