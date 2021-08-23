@@ -2,16 +2,16 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import {BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
-import UserTripList from '../components/UserTripList';
+import TripList from '../components/TripList';
 import TripForm from '../components/TripForm';
 import logo from '../logo.png';
 import '../index.css';
 
-import { QUERY_USER } from '../utils/queries';
+import { QUERY_TRIPS } from '../utils/queries';
 
 const Trips = () => {
-  const { loading, data } = useQuery(QUERY_USER);
-  const trips = data?.user.trips || [];
+  const { loading, data } = useQuery(QUERY_TRIPS);
+  const trips = data?.trips || [];
 
   return (
 
@@ -28,7 +28,7 @@ const Trips = () => {
                 {loading ? (
                   <div>Loading...</div>
                 ) : (
-                  <UserTripList
+                  <TripList
                     trips={trips}
                     title="My Trips"
                   />
