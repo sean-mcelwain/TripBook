@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -18,8 +18,8 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_TRIPS = gql`
-  query getTrips {
-    trips {
+  query getTrips($filter: TripFilter) {
+    trips(filter: $filter) {
       _id
       tripText
       tripAuthor
