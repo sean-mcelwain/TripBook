@@ -35,11 +35,23 @@ const typeDefs = gql`
     tripTitle: String
   }
 
+  type Hotel {
+    _id: ID
+    hotelName: String
+    hotelAddress: String
+    hotelPhone: String
+    hotelCost: String
+    createdAt: String
+    hotelRating: String
+    hotelImages: [String]
+  }
+
   type Query {
     users: [User]
     user(username: String!): User
     trips(username: String, filter: TripFilter): [Trip]
     trip(tripId: ID!): Trip
+    hotels(searchText: String): [Hotel]
   }
 
   type Mutation {
