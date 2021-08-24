@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import storage from "./firebase.js";
 
+import Auth from "../../utils/auth.js";
+import storage from "./firebase.js";
+import firebase from "firebase/app";
 //*function Firebase() {
 //  const [image, setImage] = useState("");
 //  const upload = () => {
@@ -29,8 +31,18 @@ class ImageUpload extends Component {
   };
 
   handleUpload = () => {
+    const profile = Auth.getProfile().data.username;
+
+    const metadata = {
+      customMetadata: {
+        user: profile,
+      },
+    };
     const { image } = this.state;
-    const uploadTask = storage.ref(`images/${image.name}`).put(image);
+    const uploadTask = storage
+      .ref(`images/${profile}/${image.name}`)
+      .put(image, metadata);
+
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -67,6 +79,10 @@ class ImageUpload extends Component {
           <div>
             <span></span>
             <input type="file" onChange={this.handleChange} />
+          </div>
+          <div>
+            <span></span>
+            <input type="text" />
           </div>
         </div>
         <br />

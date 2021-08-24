@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import storage from "./firebase.js";
+import Auth from "../../utils/auth.js";
 
 function AllImages() {
   const [allImages, setImages] = useState([]);
+  const profile = Auth.getProfile().data.username;
 
   useEffect(() => {
     getFromFirebase();
   }, []);
 
   const getFromFirebase = () => {
-    let storageRef = storage.ref(`images/`);
+    let storageRef = storage.ref(`images/${profile}`);
     console.log(allImages);
     storageRef
       .listAll()
@@ -44,15 +46,15 @@ function AllImages() {
     <div>
       (
       <header className="App-header">
-        <button onClick={() => getFromFirebase()}>
+        {/* <button onClick={() => getFromFirebase()}>
           Get Images from Firebase
-        </button>
+        </button> */}
 
         <div id="photos">
           {allImages.map((image) => {
             return (
               <div key={image} className="image">
-                <img src={image} alt="" />
+                <img className="travelImg" src={image} alt="" />
                 <button onClick={() => deleteFromFirebase(image)}>
                   Delete
                 </button>
