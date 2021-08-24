@@ -39,9 +39,7 @@ class ImageUpload extends Component {
       },
     };
     const { image } = this.state;
-    const uploadTask = storage
-      .ref(`images/${profile}/${image.name}`)
-      .put(image, metadata);
+    const uploadTask = storage.ref(`images/${image.name}`).put(image, metadata);
 
     uploadTask.on(
       "state_changed",
@@ -60,7 +58,7 @@ class ImageUpload extends Component {
           .child(image.name)
           .getDownloadURL()
           .then((url) => {
-            this.setState({ url });
+            this.props.setTripImage(url);
           });
       }
     );
@@ -79,10 +77,6 @@ class ImageUpload extends Component {
           <div>
             <span></span>
             <input type="file" onChange={this.handleChange} />
-          </div>
-          <div>
-            <span></span>
-            <input type="text" />
           </div>
         </div>
         <br />
