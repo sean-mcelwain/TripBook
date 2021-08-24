@@ -24,6 +24,10 @@ const resolvers = {
     trip: async (parent, { tripId }) => {
       return Trip.findOne({ _id: tripId });
     },
+    hotels: async (parent,{searchText}) => {
+      const params = searchText ? { hotelName:{$regex : searchText, '$options' : 'i'} } : {};
+      return Hotel.find(params); 
+    },
   },
 
   Mutation: {
