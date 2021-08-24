@@ -25,6 +25,7 @@ const TakeATrip = () => {
         value={filter.tripTitle}
         onChange={(e) => setFilter({ tripTitle: e.target.value })}
       ></input>
+
       <div className="text-center">
         {loading ? (
           <div>Loading...</div>

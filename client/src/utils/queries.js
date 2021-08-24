@@ -47,3 +47,18 @@ export const QUERY_SINGLE_TRIP = gql`
     }
   }
 `;
+
+export const QUERY_FIND_HOTELS = gql`
+query getHotels($searchText: String!) {
+  hotels(searchText:$searchText){
+    _id
+    hotelName
+    hotelAddress
+    hotelPhone
+    hotelCost
+    createdAt
+    hotelImage
+    hotelRating
+  }
+}
+`;
