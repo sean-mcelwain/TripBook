@@ -20,27 +20,11 @@ const TakeATrip = () => {
     <div className="row bg-light btnRow p-5">
       <input
         type="text"
+        class="search"
+        placeholder="Start Searching Here..."
         value={filter.tripTitle}
         onChange={(e) => setFilter({ tripTitle: e.target.value })}
       ></input>
-      <div className="col-4">
-        <button className="btn btn-primary p-3 mb-2 fullWidth">Location</button>
-        <br></br>
-        <button className="btn btn-primary p-3 mb-2 fullWidth">City</button>
-        <br></br>
-        <button className="btn btn-primary p-3 mb-2 fullWidth">Region</button>
-        <br></br>
-        <button className="btn btn-primary p-3 mb-2 fullWidth">
-          Environment
-        </button>
-        <br></br>
-      </div>
-      <div className="col-4">
-        <button className="btn btn-primary p-3 fullWidth">Attractions</button>
-      </div>
-      <div className="col-4">
-        <button className="btn btn-primary p-3 fullWidth">Cuisine</button>
-      </div>
       <div className="text-center">
         {loading ? (
           <div>Loading...</div>

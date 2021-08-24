@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
@@ -11,7 +11,8 @@ import AllImages from "../components/ImageUpload/allImages";
 import { QUERY_TRIPS } from "../utils/queries";
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_TRIPS);
+  const [filter, setFilter] = useState({});
+  const { loading, data } = useQuery(QUERY_TRIPS, { variables: { filter } });
   const trips = data?.trips || [];
 
   return (
