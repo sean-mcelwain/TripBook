@@ -24,8 +24,11 @@ const Home = () => {
               View Your Trips
             </Link>
           </div>
-          <div className="col-6 text-center">
-            <button className="btn btn-primary">Take a Trip!</button>
+
+          <div className="col-6 text-center p-5">
+            <Link className="btn btn-primary" to="/takeatrip">
+              Take A Trip!
+            </Link>
           </div>
           <div>
             <div>

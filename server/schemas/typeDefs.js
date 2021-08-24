@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type User {
@@ -30,23 +30,28 @@ const typeDefs = gql`
     token: ID!
     user: User
   }
+  input TripFilter {
+    tripText: String
+    tripTitle: String
+  }
 
   type Query {
     users: [User]
     user(username: String!): User
-    trips(username: String): [Trip]
+    trips(username: String, filter: TripFilter): [Trip]
     trip(tripId: ID!): Trip
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addTrip(tripText: String!, tripAuthor: String!, tripImage: String!, tripTitle: String!): Trip
-    addComment(
-      tripId: ID!
-      commentText: String!
-      commentAuthor: String!
+    addTrip(
+      tripText: String!
+      tripAuthor: String!
+      tripImage: String!
+      tripTitle: String!
     ): Trip
+    addComment(tripId: ID!, commentText: String!, commentAuthor: String!): Trip
     removeTrip(tripId: ID!): Trip
     removeComment(tripId: ID!, commentId: ID!): Trip
   }
