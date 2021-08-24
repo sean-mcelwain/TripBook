@@ -25,9 +25,6 @@ const TakeATrip = () => {
         value={filter.tripTitle}
         onChange={(e) => setFilter({ tripTitle: e.target.value })}
       ></input>
-      <button type="submit" class="search-button">
-        <img src="magnifingglass.png"></img>
-      </button>
       <div className="text-center">
         {loading ? (
           <div>Loading...</div>
