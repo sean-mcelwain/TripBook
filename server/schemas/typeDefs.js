@@ -43,7 +43,7 @@ const typeDefs = gql`
     hotelCost: String
     createdAt: String
     hotelRating: String
-    hotelImages: [String]
+    hotelImage: String
   }
 
   type Query {
