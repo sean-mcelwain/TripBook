@@ -90,7 +90,18 @@ button {
   margin: 0;
 }
 
+.search {
+  width: 450px;
+  height: 50px;
+  font-size: 30px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
 
+/* When the input field gets focus, change its width to 100% */
+input[type="text"]:focus {
+  width: 100%;
+}
 /* TEXT UTILS */
 
 .text-center {
@@ -220,14 +231,13 @@ button {
 }
 
 .tripCard {
-margin-bottom: 1rem;
-background-color: #ffffff;
-color: black;
-padding: 15px;
-display: inline-block;
-margin: 10px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  color: black;
+  padding: 15px;
+  display: inline-block;
+  margin: 10px;
 }
-
 
 .card {
   margin-bottom: 1rem;
@@ -323,10 +333,7 @@ label form [type="radio"] {
   margin-right: auto;
 }
 
-
 /* FLEX CONTENT */
-
-
 
 .row {
   display: flex;
@@ -336,7 +343,6 @@ label form [type="radio"] {
   margin-right: -15px;
   text-align: center;
 }
-
 
 .col-1 {
   flex: 0 0 8.33333%;
@@ -353,17 +359,14 @@ label form [type="radio"] {
   max-width: 50%;
 }
 
-
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-
 .header {
   background-color: #2d3e50;
   min-height: 200px;
-
 }
 
 body {
@@ -418,17 +421,16 @@ body {
 .mainTitle {
   font-size: 4em;
   padding: 40px;
-  text-decoration:none; 
+  text-decoration: none;
   color: #64a156;
   font-weight: bold;
   text-align: center;
 }
 
 .mainTitle a {
-  text-decoration:none; 
+  text-decoration: none;
   color: #64a156;
 }
-
 
 .form-control {
   min-height: 41px;
