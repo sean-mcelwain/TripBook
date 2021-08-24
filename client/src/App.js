@@ -19,6 +19,9 @@ import SingleTrip from "./pages/SingleTrip";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import HotelList from './pages/hotel/HotelList';
+import HotelDetails from './pages/hotel/hotelDetails';
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -73,6 +76,12 @@ function App() {
             </Route>
             <Route exact path="/trips/:tripId">
               <SingleTrip />
+            </Route>
+            <Route exact path="/findHotel">
+              <HotelList />
+            </Route>
+            <Route exact path="/hotelDetails/:hotelid">
+              <HotelDetails />
             </Route>
           </div>
           <Footer />

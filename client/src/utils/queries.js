@@ -57,6 +57,8 @@ query getHotels($searchText: String!) {
     hotelPhone
     hotelCost
     createdAt
+    hotelImage
+    hotelRating
   }
 }
 `;

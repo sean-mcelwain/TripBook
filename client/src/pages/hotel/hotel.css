@@ -32,9 +32,9 @@
   }
   
   input#email {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     
-    padding: 10px;
+    padding: 20px;
     
     border: none;
   }

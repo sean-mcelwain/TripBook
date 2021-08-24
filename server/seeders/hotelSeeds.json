@@ -8,19 +8,19 @@
     "hotelImage":"https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg"
   },
   {
-    "hotelName": "Hotel 2",
+    "hotelName": "new York hotel",
     "hotelAddress": "Address 2",
     "hotelPhone": "2345678901",
     "hotelCost": 110,
     "hotelRating":3,
-    "hotelImage":"https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg"
+    "hotelImage":"https://www.lux-review.com/wp-content/uploads/2019/09/turkish-hotel-1024x576.jpg"
   },
   {
-    "hotelName": "Hotel 3",
+    "hotelName": "Abu dabi Street",
     "hotelAddress": "Address 3",
     "hotelPhone": "3456789012",
     "hotelCost": 112,
     "hotelRating":4,
-    "hotelImage":"https://www.gannett-cdn.com/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg"
+    "hotelImage":"https://www.hoteliermagazine.com/wp-content/uploads/2018/08/LTI.jpg"
   }
 ]

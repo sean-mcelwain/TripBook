@@ -22,7 +22,6 @@ const HotelList = () => {
                 <div id="form-box">
                     <form>
                         <div id="input-group">
-                            <label for="email" class="glyphicon glyphicon-search"></label>
                             <input type="text" placeholder="Where to?" id="email" onChange={(e) => { findHotel(e.target.value) }} />
                         </div>
                         <br />
@@ -30,25 +29,30 @@ const HotelList = () => {
                 </div>
             </div>
             <section className="hotellist container">
-            {response.data && response.data.hotels && response.data.hotels.map((hotel, index)=>(
-                <div className="row" key={index}>
-                    <div className="col">
-                        <Link to="/hotelDetails/1">
+                {response.data && response.data.hotels && response.data.hotels.map((hotel, index) => (
+                    <div className="row" key={index}>
+                        <div className="col-6">
                             <img src={`${hotel.hotelImage}`}
                                 style={{ height: '200px', width: '300px' }} />
-                        </Link>
-                    </div>
-                    <div className="col">
-                        <div className="row">
-                        <label className="col-12">Hotel Name - {hotel.hotelName}</label>
-                        <label className="col-12">Rating - {hotel.hotelRating}</label>
-                        <label className="col-12"> $ Cost - {hotel.hotelCost}</label>
-                        <label className="col-12">Free Cancellation</label>
                         </div>
-                        
+                        <div className="col-6">
+                            <label className="col-12">Hotel Name - {hotel.hotelName}</label>
+                            <br></br>
+                            <label className="col-12">Rating - {hotel.hotelRating}</label>
+                            <br></br>
+                            <label className="col-12"> goibibo - Cost - $ {hotel.hotelCost}</label>
+                            <br></br>
+                            <label className="col-12"> makemytrip - Cost - $ 100</label>
+                            <br></br>
+                            <label className="col-12"> expedia - Cost - $ 130</label>
+                            <br></br>
+                            <label >Free Cancellation</label>
+                            <br></br>
+                            <button>View Detail</button>
+
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
             </section>
         </div>
     );
