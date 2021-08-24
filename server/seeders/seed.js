@@ -2,6 +2,7 @@ const db = require('../config/connection');
 const { User, Trip } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const tripSeeds = require('./tripSeeds.json');
+const hotelSeeds = require('./hotelSeeds.json');
 
 db.once('open', async () => {
   try {
@@ -21,6 +22,7 @@ db.once('open', async () => {
         }
       );
     }
+    await addSeedHotels();
   } catch (err) {
     console.error(err);
     process.exit(1);
@@ -29,3 +31,10 @@ db.once('open', async () => {
   console.log('all done!');
   process.exit(0);
 });
+
+const addSeedHotels = async() => {
+  for (let index = 0; index < hotelSeeds.length; index++) {
+    const element = hotelSeeds[index];
+    await Hotel.create(element);
+  }
+}
