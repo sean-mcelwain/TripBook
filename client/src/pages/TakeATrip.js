@@ -40,6 +40,9 @@ const TakeATrip = () => {
       </div>
       <div className="col-4">
         <button className="btn btn-primary p-3 fullWidth">Cuisine</button>
+        <Link className="btn btn-primary" to="/findHotel">
+          Find Hotel
+        </Link>
       </div>
       <div className="text-center">
         {loading ? (
