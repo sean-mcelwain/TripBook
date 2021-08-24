@@ -40,15 +40,15 @@ const HotelList = () => {
                             <br></br>
                             <label className="col-12">Rating - {hotel.hotelRating}</label>
                             <br></br>
-                            <label className="col-12"> goibibo - Cost - $ {hotel.hotelCost}</label>
+                            <label className="col-12"> goibibo - Cost - $ {hotel.hotelCost} <a href="https://www.goibibo.com/hotels">View Detail</a></label>
                             <br></br>
-                            <label className="col-12"> makemytrip - Cost - $ 100</label>
+                            <label className="col-12"> makemytrip - Cost - $ 100 <a href="https://www.makemytrip.com/hotels/">View Detail</a></label>
                             <br></br>
-                            <label className="col-12"> expedia - Cost - $ 130</label>
+                            <label className="col-12"> expedia - Cost - $ 130 <a href="https://www.expedia.co.in/Hotels">View Detail</a></label>
                             <br></br>
                             <label >Free Cancellation</label>
                             <br></br>
-                            <button>View Detail</button>
+                            
 
                         </div>
                     </div>
