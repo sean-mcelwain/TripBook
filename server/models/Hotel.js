@@ -28,7 +28,7 @@ const hotelSchema = new Schema({
     required: true,
     default: 1
   },
-  hotelImages: [{imageName:{type: String}}],
+  hotelImage: {type: String},
   createdAt: {
     type: Date,
     default: Date.now,
