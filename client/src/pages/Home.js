@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import TripList from "../components/TripList";
-import TripForm from "../components/TripForm";
-import logo from "../logo.png";
 import "../index.css";
-import AllImages from "../components/ImageUpload/allImages";
 
 import { QUERY_TRIPS } from "../utils/queries";
 
 const Home = () => {
-  const [filter, setFilter] = useState({});
+  const [filter] = useState({});
   const { loading, data } = useQuery(QUERY_TRIPS, { variables: { filter } });
   const trips = data?.trips || [];
 
