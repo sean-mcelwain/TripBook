@@ -46,7 +46,6 @@ const Header = () => {
             <Link to="/">
               <img
                 className="homeLogo"
-                onClick="window.location.href= /pages/home.js'"
                 src={logo}
                 alt="homeLogo"
               ></img>{" "}
