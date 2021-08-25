@@ -30,7 +30,7 @@ class ImageUpload extends Component {
     }
   };
 
-  handleUpload = () => {
+  handleUpload() {
     const profile = Auth.getProfile().data.username;
 
     const metadata = {
@@ -39,7 +39,9 @@ class ImageUpload extends Component {
       },
     };
     const { image } = this.state;
-    const uploadTask = storage.ref(`images/${image.name}`).put(image, metadata);
+    const uploadTask = storage
+      .ref(`images/${profile}/${image.name}`)
+      .put(image, metadata);
 
     uploadTask.on(
       "state_changed",
@@ -57,12 +59,15 @@ class ImageUpload extends Component {
           .ref("images")
           .child(image.name)
           .getDownloadURL()
+
           .then((url) => {
+            console.log("url", this.props);
             this.props.setTripImage(url);
+            console.log(url);
           });
       }
     );
-  };
+  }
 
   render() {
     return (
@@ -82,7 +87,7 @@ class ImageUpload extends Component {
         <br />
         <br />
         <br />
-        <button onClick={this.handleUpload}>Upload</button>
+        <button onClick={() => this.handleUpload}>Upload</button>
         <br />
         <br />
         <img src={this.state.url} alt="Uploaded Images" />

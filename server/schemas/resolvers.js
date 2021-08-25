@@ -24,9 +24,11 @@ const resolvers = {
     trip: async (parent, { tripId }) => {
       return Trip.findOne({ _id: tripId });
     },
-    hotels: async (parent,{searchText}) => {
-      const params = searchText ? { hotelName:{$regex : searchText, '$options' : 'i'} } : {};
-      return Hotel.find(params); 
+    hotels: async (parent, { searchText }) => {
+      const params = searchText
+        ? { hotelName: { $regex: searchText, $options: "i" } }
+        : {};
+      return Hotel.find(params);
     },
   },
 
@@ -53,7 +55,7 @@ const resolvers = {
 
       return { token, user };
     },
-    addTrip: async (parent, { tripText, tripAuthor, tripTitle }) => {
+    addTrip: async (parent, { tripText, tripAuthor, tripTitle, tripImage }) => {
       const trip = await Trip.create({
         tripText,
         tripAuthor,
