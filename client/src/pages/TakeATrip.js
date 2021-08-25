@@ -8,6 +8,7 @@ import logo from "../logo.png";
 import "../index.css";
 
 import { QUERY_TRIPS } from "../utils/queries";
+import '../pages/hotel/hotel.css';
 
 const TakeATrip = () => {
   const [filter, setFilter] = useState({});
@@ -18,13 +19,28 @@ const TakeATrip = () => {
 
   return (
     <div className="row bg-light btnRow p-5">
-      <input
-        type="text"
-        class="search"
-        placeholder="Start Searching Here..."
-        value={filter.tripTitle}
-        onChange={(e) => setFilter({ tripTitle: e.target.value })}
-      ></input>
+      <div>
+        <picture>
+          <img src="https://static.tacdn.com/img2/brand/home/home614_dt.jpg" alt="home" />
+        </picture>
+        <div id="form-box">
+          <form>
+            <div id="input-group">
+              {/* <input type="text" placeholder="Where to?" id="email" onChange={(e) => { findHotel(e.target.value) }} /> */}
+              <input
+              id="email"
+                type="text"
+                class="search"
+                placeholder="Start Searching Here..."
+                value={filter.tripTitle}
+                onChange={(e) => setFilter({ tripTitle: e.target.value })}
+              ></input>
+            </div>
+            <br />
+          </form>
+        </div>
+      </div>
+
 
       <div className="text-center">
         {loading ? (
