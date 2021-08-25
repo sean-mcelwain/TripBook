@@ -7,19 +7,19 @@
   },
   {
     "tripText": "Something to say about a good isolated vacation, completely unplugged!",
-    "tripAuthor": "Brian Kernighan",
+    "tripAuthor": "Donald Knuth",
     "tripImage": "/Images/1.jpg",
     "tripTitle": "Maldives boat trip"
   },
   {
     "tripText": "The City of love held up to its reputation!",
-    "tripAuthor": "Max Kanat-Alexander",
+    "tripAuthor": "Donald Thomas",
     "tripImage": "/Images/2.jpg",
     "tripTitle": "Eiffel Tower"
   },
   {
     "tripText": "Of course we sang the song as we skipped across the bridge. It was a lot bigger than I thought.",
-    "tripAuthor": "Why The Lucky Stiff",
+    "tripAuthor": "Lenny Thomas",
     "tripImage": "/Images/3.jpg",
     "tripTitle": "London Bridge"
   },
@@ -31,7 +31,7 @@
   },
   {
     "tripText": "Really cool to walk around...I guess you can say I was entertained...",
-    "tripAuthor": "Edward V. Berard",
+    "tripAuthor": "Edward Berard",
     "tripImage": "/Images/5.jpg",
     "tripTitle": "Coliseum"
   },
@@ -43,25 +43,25 @@
   },
   {
     "tripText": "Didn't get to put on a wig and yell at people but it was still pretty cool.",
-    "tripAuthor": "C.A.R. Hoare",
+    "tripAuthor": "Cathy Hoare",
     "tripImage": "/Images/7.jpg",
     "tripTitle": "Parliament trip"
   },
   {
     "tripText": "Warning, do not be afraid of heights. If you are not it leads to phenomenal views.",
-    "tripAuthor": "David Thomas",
+    "tripAuthor": "Sara Kanga",
     "tripImage": "/Images/8.jpg",
     "tripTitle": "London Eye"
   },
   {
     "tripText": "breeze in your face and no matter where you looked it looked like a picture in a travel magazine.",
-    "tripAuthor": "Donald Knuth",
+    "tripAuthor": "Grant Shell",
     "tripImage": "/Images/9.jpg",
     "tripTitle": "Greece"
   },
   {
     "tripText": "Perfect vacation spot to get away from everything and truly decompress.",
-    "tripAuthor": "Lernantino",
+    "tripAuthor": "Adam Maresch",
     "tripImage": "/Images/10.jpg",
     "tripTitle": "If you have to ask where you cant afford it"
   }
