@@ -19,7 +19,7 @@ const UserTripList = ({ trips, title }) => {
               className="btn"
               to={`/trips/${trip._id}`}
             >
-            <img src={trip.tripImage} alt="Image" height="250" /> 
+            <img src={trip.tripImage} alt="tripImage" height="250" /> 
             </Link>
           </div>
         ))}
