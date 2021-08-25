@@ -1,4 +1,4 @@
-# TripBook - ReadMe
+# TripBook - ReadMe ![BADGE](https://img.shields.io/badge/license-MIT-green) 
 <a name='description'></a>
  ## Description 
 This is a web application that allows a user to view other users trip pictures, upload their own trip photos, and then search the other user's trips for travel ideas and recommendations.
@@ -6,12 +6,13 @@ This is a web application that allows a user to view other users trip pictures, 
 ## Table of Contents  
  1. [ Description. ](#description)  
  2. [ Installation. ](#installation)  
- 3. [ Usage tips. ](#usage)   
- 4. [ License. ](#license)  
- 5. [ Contribution Guidelines. ](#contribution)  
- 6. [ Tests. ](#tests)  
- 7. [ Questions. ](#questions)  
- 8. [ Screenshot. ](#screenshot) 
+ 3. [ Technologies Used. ](#tech)
+ 4. [ Usage tips. ](#usage)  
+ 5. [ License. ](#license)  
+ 6. [ Contribution Guidelines. ](#contribution)  
+ 7. [ Tests. ](#tests)  
+ 8. [ Questions. ](#questions)  
+ 9. [ Screenshot. ](#screenshot) 
 
 ## Heroku Link
 URL: https://tripbook-voyageurs.herokuapp.com
@@ -21,6 +22,11 @@ URL: https://tripbook-voyageurs.herokuapp.com
 This project's dependencies are contained in the package.json file contained in this repository.  In order to install this app locally, Node and Mongo must be installed and accessible via the command line application on the local computer.  Then run: (1) the command "npm install" in the local directory containing the utiltiy to install the dependencies, (2) the command "npm run seed" to seed the database, and (3) the commande "npm run develop" initialize the app, accessible at localhost:3000. 
 
 Alternatively, this app can be used via the deployment on Heroku without installation described above. 
+
+<a name='tech'></a>
+ ## Technologies Used
+- Node.js, Express.js, GraphQL, MongoDB, Mongoose, JWT Authentication, Firebase, React, HTML, CSS, Heroku, and Clipboard.
+
 
  <a name='usage'></a>
  ## Usage 
@@ -69,4 +75,4 @@ For any question regarding this project, the preferred method of communication i
 
 <a name='screenshot'></a>
  ## Screenshot 
-![Screenshot](https://)
+![Screenshot](https://raw.githubusercontent.com/sean-mcelwain/TripBook/adding-screenshot/screenshot.JPG)
