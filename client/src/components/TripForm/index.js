@@ -34,7 +34,7 @@ const TripForm = () => {
     event.preventDefault();
     console.log("url", tripImage);
     try {
-      const { data } = await addTrip({
+       await addTrip({
         variables: {
           tripText,
           tripAuthor: Auth.getProfile().data.username,

@@ -16,7 +16,7 @@ const CommentForm = ({ tripId }) => {
     event.preventDefault();
 
     try {
-      const { data } = await addComment({
+     await addComment({
         variables: {
           tripId,
           commentText,
