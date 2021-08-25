@@ -1,7 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
+import logo from "../../logo.png";
+import "../../index.css";
 
 const Header = () => {
   const logout = (event) => {
@@ -9,32 +11,47 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">TripBook</h1>
-          </Link>
-          <p className="m-0">Hope you like pictures of Mountains...</p>
+    <header className="header">
+      {/* Top nav bar buttons */}
+      <div className="container-fluid">
+        <div className="row text-right">
+          <div className="navBar">
+            {Auth.loggedIn() ? (
+              <>
+                <span className="navLink rightBorder">
+                  Welcome {Auth.getProfile().data.username}!
+                </span>
+                <button className="navLink rightBorder" onClick={logout}>
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link className="navLink rightBorder" to="/login">
+                  Login
+                </Link>
+                <Link className="navLink rightBorder" to="/signup">
+                  Signup
+                </Link>
+              </>
+            )}
+            <Link to="/" className="navLink rightBorder">
+              Home
+            </Link>
+          </div>
         </div>
+        {/* Logo */}
         <div>
-          {Auth.loggedIn() ? (
-            <>
-              <span>Hey there, {Auth.getProfile().data.username}!</span>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
-                Login
-              </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
-              </Link>
-            </>
-          )}
+          <div className="mainTitle">
+            <Link to="/">
+              <img
+                className="homeLogo"
+                onClick="window.location.href= /pages/home.js'"
+                src={logo}
+              ></img>{" "}
+              TripBook
+            </Link>
+          </div>
         </div>
       </div>
     </header>

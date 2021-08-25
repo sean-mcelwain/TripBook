@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_USER = gql`
   query user($username: String!) {
@@ -9,6 +9,8 @@ export const QUERY_USER = gql`
       trips {
         _id
         tripText
+        tripImage
+        tripTitle
         createdAt
       }
     }
@@ -16,11 +18,13 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_TRIPS = gql`
-  query getTrips {
-    trips {
+  query getTrips($filter: TripFilter) {
+    trips(filter: $filter) {
       _id
       tripText
       tripAuthor
+      tripImage
+      tripTitle
       createdAt
     }
   }
@@ -32,6 +36,8 @@ export const QUERY_SINGLE_TRIP = gql`
       _id
       tripText
       tripAuthor
+      tripImage
+      tripTitle
       createdAt
       comments {
         _id
@@ -40,4 +46,19 @@ export const QUERY_SINGLE_TRIP = gql`
       }
     }
   }
+`;
+
+export const QUERY_FIND_HOTELS = gql`
+query getHotels($searchText: String!) {
+  hotels(searchText:$searchText){
+    _id
+    hotelName
+    hotelAddress
+    hotelPhone
+    hotelCost
+    createdAt
+    hotelImage
+    hotelRating
+  }
+}
 `;

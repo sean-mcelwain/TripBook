@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import ImageUpload from "../ImageUpload";
 
-import { ADD_TRIP } from '../../utils/mutations';
-import { QUERY_TRIPS } from '../../utils/queries';
+import { ADD_TRIP } from "../../utils/mutations";
+import { QUERY_TRIPS } from "../../utils/queries";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 
 const TripForm = () => {
-  const [tripText, setTripText] = useState('');
+  const [tripText, setTripText] = useState("");
+  const [tripImage, setTripImage] = useState("");
+  const [tripTitle, setTripTitle] = useState("");
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -35,10 +38,14 @@ const TripForm = () => {
         variables: {
           tripText,
           tripAuthor: Auth.getProfile().data.username,
+          tripImage,
+          tripTitle,
         },
       });
 
-      setTripText('');
+      setTripText("");
+      setTripImage("");
+      setTripTitle("");
     } catch (err) {
       console.error(err);
     }
@@ -47,12 +54,20 @@ const TripForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'tripText' && value.length <= 280) {
+    if (name === "tripText" && value.length <= 280) {
       setTripText(value);
       setCharacterCount(value.length);
     }
+    if (name === "tripImage" && value.length <= 280) {
+      setTripImage(value);
+      setCharacterCount(value.length);
+    }
+    if (name === "tripTitle" && value.length <= 280) {
+      setTripTitle(value);
+      setCharacterCount(value.length);
+    }
   };
-
+  console.log(tripImage);
   return (
     <div>
       <h3>Share your recent Trip!</h3>
@@ -60,34 +75,43 @@ const TripForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
+            className={` ${
+              characterCount === 280 || error ? "text-danger" : ""
             }`}
           >
             Character Count: {characterCount}/280
           </p>
-          <form
-            className="flex-row justify-center justify-space-between-md align-center"
-            onSubmit={handleFormSubmit}
-          >
-            <div className="col-12 col-lg-9">
+          <form className="" onSubmit={handleFormSubmit}>
+            <div className="">
               <textarea
                 name="tripText"
                 placeholder="Here's a new trip..."
                 value={tripText}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input"
+                style={{ lineHeight: "1.5", resize: "vertical" }}
+                onChange={handleChange}
+              ></textarea>
+
+              <ImageUpload tripImage={tripImage} setTripImage={setTripImage} />
+
+              <textarea
+                name="tripTitle"
+                placeholder="Here's a new Title..."
+                value={tripTitle}
+                className="form-input"
+                style={{ lineHeight: "1.5", resize: "vertical" }}
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div className="">
+              <button className="btn btn-primary btn-block" type="submit">
                 Add Trip
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className="col-12 text-black">
+                <b>Error: </b>
                 {error.message}
               </div>
             )}
@@ -95,7 +119,7 @@ const TripForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your trips. Please{' '}
+          You need to be logged in to share your trips. Please{" "}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

@@ -1,42 +1,68 @@
 [
   {
-    "tripText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
-    "tripAuthor": "Brian Kernighan"
+    "tripText": "Test Text",
+    "tripAuthor": "Sean",
+    "tripImage": "/Images/1.jpg",
+    "tripTitle": "Sean Test"
   },
   {
-    "tripText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
-    "tripAuthor": "Max Kanat-Alexander"
+    "tripText": "Something to say about a good isolated vacation, completely unplugged!",
+    "tripAuthor": "Donald Knuth",
+    "tripImage": "/Images/1.jpg",
+    "tripTitle": "Maldives boat trip"
   },
   {
-    "tripText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
-    "tripAuthor": "Why The Lucky Stiff"
+    "tripText": "The City of love held up to its reputation!",
+    "tripAuthor": "Donald Thomas",
+    "tripImage": "/Images/2.jpg",
+    "tripTitle": "Eiffel Tower"
   },
   {
-    "tripText": "I'm not a great programmer; I'm just a good programmer with great habits.",
-    "tripAuthor": "Kent Beck"
+    "tripText": "Of course we sang the song as we skipped across the bridge. It was a lot bigger than I thought.",
+    "tripAuthor": "Lenny Thomas",
+    "tripImage": "/Images/3.jpg",
+    "tripTitle": "London Bridge"
   },
   {
-    "tripText": "Walking on water and developing software from a specification are easy if both are frozen.",
-    "tripAuthor": "Edward V. Berard"
+    "tripText": "Some how this perfect picture didn't even do it credit.",
+    "tripAuthor": "Kent Beck",
+    "tripImage": "/Images/4.jpg",
+    "tripTitle": "Bora sunset"
   },
   {
-    "tripText": "The most disastrous thing that you can ever learn is your first programming language.",
-    "tripAuthor": "Alan Kay"
+    "tripText": "Really cool to walk around...I guess you can say I was entertained...",
+    "tripAuthor": "Edward Berard",
+    "tripImage": "/Images/5.jpg",
+    "tripTitle": "Coliseum"
   },
   {
-    "tripText": "The most important property of a program is whether it accomplishes the intention of its user.",
-    "tripAuthor": "C.A.R. Hoare"
+    "tripText": "slowest taxi ever but still really cool.",
+    "tripAuthor": "Alan Kay",
+    "tripImage": "/Images/6.jpg",
+    "tripTitle": "Gondola Rides"
   },
   {
-    "tripText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
-    "tripAuthor": "David Thomas"
+    "tripText": "Didn't get to put on a wig and yell at people but it was still pretty cool.",
+    "tripAuthor": "Cathy Hoare",
+    "tripImage": "/Images/7.jpg",
+    "tripTitle": "Parliament trip"
   },
   {
-    "tripText": "If you optimize everything, you will always be unhappy.",
-    "tripAuthor": "Donald Knuth"
+    "tripText": "Warning, do not be afraid of heights. If you are not it leads to phenomenal views.",
+    "tripAuthor": "Sara Kanga",
+    "tripImage": "/Images/8.jpg",
+    "tripTitle": "London Eye"
   },
   {
-    "tripText": "It's not a bug; it's an undocumented feature.",
-    "tripAuthor": "Lernantino"
+    "tripText": "breeze in your face and no matter where you looked it looked like a picture in a travel magazine.",
+    "tripAuthor": "Grant Shell",
+    "tripImage": "/Images/9.jpg",
+    "tripTitle": "Greece"
+  },
+  {
+    "tripText": "Perfect vacation spot to get away from everything and truly decompress.",
+    "tripAuthor": "Adam Maresch",
+    "tripImage": "/Images/10.jpg",
+    "tripTitle": "If you have to ask where you cant afford it"
   }
 ]

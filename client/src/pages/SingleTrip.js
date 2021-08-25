@@ -24,20 +24,20 @@ const SingleTrip = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {trip.tripAuthor} <br />
+    <div className="tripCard">
+      <h3 className="card-header ">
+      {trip.tripTitle} <br /></h3>
+      <h5>{trip.tripAuthor}
         <span style={{ fontSize: '1rem' }}>
-          had this trip on {trip.createdAt}
+       &nbsp; posted this trip on {trip.createdAt}
         </span>
-      </h3>
-      <div className="bg-light py-4">
+      </h5>
+      <img src={trip.tripImage} alt="Image" height="500" />
+      <div className="">
         <blockquote
-          className="p-4"
+          className=""
           style={{
             fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
             lineHeight: '1.5',
           }}
         >
@@ -45,10 +45,10 @@ const SingleTrip = () => {
         </blockquote>
       </div>
 
-      <div className="my-5">
+      <div className="">
         <CommentList comments={trip.comments} />
       </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="" style={{ border: '1px solid #1a1a1a' }}>
         <CommentForm tripId={trip._id} />
       </div>
     </div>

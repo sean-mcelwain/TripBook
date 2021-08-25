@@ -1,21 +1,32 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Trip } = require('../models');
-const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require("apollo-server-express");
+const { User, Trip, Hotel } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('trips');
+      return User.find().populate("trips");
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('trips');
+      return User.findOne({ username }).populate("trips");
     },
-    trips: async (parent, { username }) => {
-      const params = username ? { username } : {};
+    trips: async (parent, { username, filter }) => {
+      const params = {
+        ...(username && { username }),
+        ...filter,
+        ...(filter.tripTitle && {
+          tripTitle: new RegExp(filter.tripTitle, "i"),
+        }),
+      };
       return Trip.find(params).sort({ createdAt: -1 });
     },
+
     trip: async (parent, { tripId }) => {
       return Trip.findOne({ _id: tripId });
+    },
+    hotels: async (parent,{searchText}) => {
+      const params = searchText ? { hotelName:{$regex : searchText, '$options' : 'i'} } : {};
+      return Hotel.find(params); 
     },
   },
 
@@ -29,21 +40,26 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError("No user found with this email address");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError("Incorrect credentials");
       }
 
       const token = signToken(user);
 
       return { token, user };
     },
-    addTrip: async (parent, { tripText, tripAuthor }) => {
-      const trip = await Trip.create({ tripText, tripAuthor });
+    addTrip: async (parent, { tripText, tripAuthor, tripTitle }) => {
+      const trip = await Trip.create({
+        tripText,
+        tripAuthor,
+        tripImage,
+        tripTitle,
+      });
 
       await User.findOneAndUpdate(
         { username: tripAuthor },
