@@ -25,7 +25,7 @@ Alternatively, this app can be used via the deployment on Heroku without install
 
 <a name='tech'></a>
  ## Technologies Used
-- Node.js, Express.js, GraphQL, MongoDB, Mongoose, JWT Authentication, Firebase, React, HTML, CSS, Heroku, and Clipboard
+- Node.js, Express.js, GraphQL, MongoDB, Mongoose, JWT Authentication, Firebase, React, HTML, CSS, Heroku, and Clipboard.
 
 
  <a name='usage'></a>
