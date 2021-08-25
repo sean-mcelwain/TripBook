@@ -1,7 +1,7 @@
 # TripBook - ReadMe ![BADGE](https://img.shields.io/badge/license-MIT-green) 
 <a name='description'></a>
  ## Description 
-This is a web application that allows a user to view other users trip pictures, upload their own trip photos, and then search the other user's trips for travel ideas and recommendations. This app utilizes 
+This is a web application that allows a user to view other users trip pictures, upload their own trip photos, and then search the other user's trips for travel ideas and recommendations.
 
 ## Table of Contents  
  1. [ Description. ](#description)  
