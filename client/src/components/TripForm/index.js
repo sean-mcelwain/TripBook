@@ -32,7 +32,7 @@ const TripForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log("url", tripImage);
     try {
       const { data } = await addTrip({
         variables: {
@@ -67,7 +67,7 @@ const TripForm = () => {
       setCharacterCount(value.length);
     }
   };
-  console.log(tripImage);
+
   return (
     <div>
       <h3>Share your recent Trip!</h3>
