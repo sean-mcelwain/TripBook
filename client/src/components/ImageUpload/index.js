@@ -2,16 +2,6 @@ import React, { Component } from "react";
 
 import Auth from "../../utils/auth.js";
 import storage from "./firebase.js";
-import firebase from "firebase/app";
-//*function Firebase() {
-//  const [image, setImage] = useState("");
-//  const upload = () => {
-//    if (image == null) return;
-//    storage
-//      .ref(`/images/${image.name}`)
-//      .put(image)
-//      .on("state_changed", alert("success"), alert);
-//  };
 
 class ImageUpload extends Component {
   constructor(props) {
