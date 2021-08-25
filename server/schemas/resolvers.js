@@ -56,6 +56,10 @@ const resolvers = {
       return { token, user };
     },
     addTrip: async (parent, { tripText, tripAuthor, tripTitle, tripImage }) => {
+      console.log(tripText);
+      console.log(tripAuthor);
+      console.log(tripTitle);
+      console.log(tripImage);
       const trip = await Trip.create({
         tripText,
         tripAuthor,
