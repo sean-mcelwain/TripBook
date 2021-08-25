@@ -32,16 +32,13 @@ class ImageUpload extends Component {
 
   handleUpload() {
     const profile = Auth.getProfile().data.username;
+    console.log(profile);
+    console.log(this.props.tripImage);
 
-    const metadata = {
-      customMetadata: {
-        user: profile,
-      },
-    };
     const { image } = this.state;
-    const uploadTask = storage
-      .ref(`images/${profile}/${image.name}`)
-      .put(image, metadata);
+    console.log(image);
+    var storageRef = firebase.storage().ref();
+    const uploadTask = storageRef.child(`images/${image.name}`).put(image);
 
     uploadTask.on(
       "state_changed",
@@ -55,16 +52,10 @@ class ImageUpload extends Component {
         console.log(error);
       },
       () => {
-        storage
-          .ref("images")
-          .child(image.name)
-          .getDownloadURL()
-
-          .then((url) => {
-            console.log("url", this.props);
-            this.props.setTripImage(url);
-            console.log(url);
-          });
+        uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+          console.log(downloadURL);
+          this.props.setTripImage(downloadURL);
+        });
       }
     );
   }
@@ -87,7 +78,7 @@ class ImageUpload extends Component {
         <br />
         <br />
         <br />
-        <button onClick={() => this.handleUpload}>Upload</button>
+        <button onClick={this.handleUpload.bind(this)}>Upload</button>
         <br />
         <br />
         <img src={this.state.url} alt="Uploaded Images" />

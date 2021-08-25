@@ -18,11 +18,11 @@ const TripForm = () => {
   const [addTrip, { error }] = useMutation(ADD_TRIP, {
     update(cache, { data: { addTrip } }) {
       try {
-        const { trips } = cache.readQuery({ query: QUERY_TRIPS });
+        const results = cache.readQuery({ query: QUERY_TRIPS });
 
         cache.writeQuery({
           query: QUERY_TRIPS,
-          data: { trips: [addTrip, ...trips] },
+          data: { trips: [addTrip, ...(results ? results.trips : [])] },
         });
       } catch (e) {
         console.error(e);
@@ -33,6 +33,15 @@ const TripForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log("url", tripImage);
+    const test = {
+      variables: {
+        tripText,
+        tripAuthor: Auth.getProfile().data.username,
+        tripImage,
+        tripTitle,
+      },
+    };
+    console.log(test);
     try {
       const { data } = await addTrip({
         variables: {
@@ -58,10 +67,7 @@ const TripForm = () => {
       setTripText(value);
       setCharacterCount(value.length);
     }
-    if (name === "tripImage" && value.length <= 280) {
-      setTripImage(value);
-      setCharacterCount(value.length);
-    }
+    console.log(name, value);
     if (name === "tripTitle" && value.length <= 280) {
       setTripTitle(value);
       setCharacterCount(value.length);
