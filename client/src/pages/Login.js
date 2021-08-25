@@ -51,10 +51,10 @@ const Login = () => {
             <form onSubmit={handleFormSubmit}>
                   <h2 className="text-left">Login</h2>   
                   <div className="form-group">
-                    <input type="email" className="form-control" placeholder="Your email" name="email" type="email" value={formState.email} onChange={handleChange}></input>
+                    <input type="email" className="form-control" placeholder="Your email" name="email" value={formState.email} onChange={handleChange}></input>
                   </div>
                   <div className="form-group">
-                      <input type="password" className="form-control" placeholder="******" name="password" type="password" value={formState.password} onChange={handleChange}></input>
+                      <input type="password" className="form-control" placeholder="******" name="password" value={formState.password} onChange={handleChange}></input>
                   </div>        
                   <div className="form-group">
                       <button type="submit" name="loginForm" className="btn btn-lg btn-block">Sign in</button>

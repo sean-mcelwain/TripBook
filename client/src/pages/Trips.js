@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import TripList from "../components/TripList";
-import TripForm from "../components/TripForm";
-import logo from "../logo.png";
 import "../index.css";
 
 import { QUERY_TRIPS } from "../utils/queries";
 import storage from "../components/ImageUpload/firebase";
 import Auth from "../utils/auth";
-import { forEach } from "lodash";
 
 const Trips = () => {
-  const [filter, setFilter] = useState({});
+  const [filter] = useState({});
   const { loading, data } = useQuery(QUERY_TRIPS, { variables: { filter } });
   const trips = data?.trips || [];
   const [allImages, setImages] = useState([]);
@@ -21,7 +18,7 @@ const Trips = () => {
 
   useEffect(() => {
     getFromFirebase();
-  }, []);
+  });
   console.log(allImages);
   const getFromFirebase = () => {
     let storageRef = storage.ref(`images/${profile}`);

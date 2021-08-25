@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import './hotel.css';
 
 import { useLazyQuery } from "@apollo/client";
@@ -17,7 +16,7 @@ const HotelList = () => {
         <div>
             <div>
                 <picture>
-                    <img src="https://static.tacdn.com/img2/brand/home/home614_dt.jpg" />
+                    <img src="https://static.tacdn.com/img2/brand/home/home614_dt.jpg" alt="home"/>
                 </picture>
                 <div id="form-box">
                     <form>
@@ -33,7 +32,7 @@ const HotelList = () => {
                     <div className="row" key={index}>
                         <div className="col-6">
                             <img src={`${hotel.hotelImage}`}
-                                style={{ height: '200px', width: '300px' }} />
+                                style={{ height: '200px', width: '300px' }} alt="hotelImage"/>
                         </div>
                         <div className="col-6">
                             <label className="col-12">Hotel Name - {hotel.hotelName}</label>

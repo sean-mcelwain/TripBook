@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "@apollo/client";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-
 import TripList from "../components/TripList";
-import TripForm from "../components/TripForm";
-import logo from "../logo.png";
 import "../index.css";
 
 import { QUERY_TRIPS } from "../utils/queries";

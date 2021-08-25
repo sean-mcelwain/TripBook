@@ -8,7 +8,7 @@ function AllImages() {
 
   useEffect(() => {
     getFromFirebase();
-  }, []);
+  });
 
   const getFromFirebase = () => {
     let storageRef = storage.ref(`images/${profile}`);

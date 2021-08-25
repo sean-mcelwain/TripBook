@@ -32,7 +32,7 @@ const SingleTrip = () => {
        &nbsp; posted this trip on {trip.createdAt}
         </span>
       </h5>
-      <img src={trip.tripImage} alt="Image" height="500" />
+      <img src={trip.tripImage} alt="tripImage" height="500" />
       <div className="">
         <blockquote
           className=""
