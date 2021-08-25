@@ -69,4 +69,4 @@ For any question regarding this project, the preferred method of communication i
 
 <a name='screenshot'></a>
  ## Screenshot 
-![Screenshot](https://)
+![Screenshot](https://raw.githubusercontent.com/sean-mcelwain/TripBook/adding-screenshot/screenshot.JPG)
